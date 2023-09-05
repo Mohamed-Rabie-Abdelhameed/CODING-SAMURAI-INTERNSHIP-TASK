@@ -43,18 +43,18 @@ ul {
 }
 
 .nav-link {
-  color: var(--accent);
+  color: var(--primary);
+  font-weight: 400;
 }
 
 .nav-item {
-  color: var(--accent);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .nav-item :hover {
-  color: var(--secondary);
+  color: var(--accent);
   cursor: pointer;
 }
 
