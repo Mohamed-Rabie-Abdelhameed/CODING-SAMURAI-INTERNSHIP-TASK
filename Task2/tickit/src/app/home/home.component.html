@@ -1,0 +1,16 @@
+<div class="row">
+  <div
+    class="col-md-6 d-flex flex-column justify-content-center"
+    [ngClass]="{
+    'order-1': isMobile,
+  }"
+  >
+    <h1 class="display-1">
+      TickIt: Your Ultimate <strong>To-Do</strong> List Companion.
+    </h1>
+    <button class="btn btn-primary" routerLink="/tasks">Get Started</button>
+  </div>
+  <div class="col-md-6">
+    <img src="assets/images/hero.svg" alt="hero image" />
+  </div>
+</div>
