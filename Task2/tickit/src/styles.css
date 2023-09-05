@@ -4,19 +4,16 @@
   --secondary: #edcefd;
   --light: #f7f3ff;
   --dark: #021231;
-  --gray: #d9d7f1;
+  --gray: #f2f5f8;
   --bg: #fafcff;
 }
 
 body,
 html {
-  margin: 0px;
-  padding: 0px;
   background-color: var(--bg);
+  font-family: 'tenor sans', sans-serif;
 }
-
-.row {
-  margin: 0px;
-  background-color: var(--bg);
+body {
+  margin: 0;
+  padding: 0;
 }
-
