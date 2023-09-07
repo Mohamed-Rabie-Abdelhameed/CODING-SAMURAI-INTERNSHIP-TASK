@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Task } from '../models/task';
 import { TasksService } from '../services/tasks.service';
 
@@ -9,9 +9,21 @@ import { TasksService } from '../services/tasks.service';
 })
 export class TasksComponent implements OnInit {
   constructor(private tasksAPI: TasksService) {}
-
+  isScrolledToBottom: boolean = false;
   tasks: Task[] = [];
   shownTasks: Task[] = [];
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 80
+    ) {
+      this.isScrolledToBottom = true;
+    } else {
+      this.isScrolledToBottom = false;
+    }
+  }
 
   ngOnInit() {
     this.tasks = this.tasksAPI.getAllTasks();
