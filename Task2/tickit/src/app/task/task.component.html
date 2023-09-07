@@ -1,0 +1,93 @@
+<div
+  class="card"
+  [ngClass]="{
+    high: task.priority === 1,
+    medium: task.priority === 2,
+    low: task.priority === 3,
+    done: task.done
+  }"
+>
+  <div class="card-body position-relative">
+    <div class="d-flex justify-content-between align-items-baseline">
+      <h5
+        class="card-title"
+        data-bs-toggle="modal"
+        [attr.data-bs-target]="'#editTaskModal' + task.id"
+      >
+        {{ task.title }}
+      </h5>
+      <i
+        *ngIf="!task.done"
+        class="bi bi-check-circle"
+        (click)="markTaskAsDone()"
+      ></i>
+      <i
+        *ngIf="task.done"
+        class="bi bi-check-circle-fill"
+        (click)="markTaskAsUndone()"
+      ></i>
+    </div>
+    <p
+      class="card-text"
+      data-bs-toggle="modal"
+      [attr.data-bs-target]="'#editTaskModal' + task.id"
+    >
+      {{ task.description }}
+    </p>
+    <div
+      data-bs-toggle="modal"
+      [attr.data-bs-target]="'#editTaskModal' + task.id"
+    >
+      <span class="badge rounded-pill bg-danger" *ngIf="task.priority === 1" [ngClass]="{'done-bg': task.done}"
+        >High</span
+      >
+      <span class="badge rounded-pill bg-warning" *ngIf="task.priority === 2" [ngClass]="{'done-bg': task.done}"
+        >Medium</span
+      >
+      <span class="badge rounded-pill bg-success" *ngIf="task.priority === 3" [ngClass]="{'done-bg': task.done}"
+        >Low</span
+      >
+    </div>
+    <p
+      class="text-muted"
+      data-bs-toggle="modal"
+      [attr.data-bs-target]="'#editTaskModal' + task.id"
+    >
+      {{ getTimePassedSinceDate(task.date) }}
+    </p>
+
+    <i
+      class="bi bi-trash position-absolute bottom-0 end-0"
+      (click)="deleteTask()"
+    ></i>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  [id]="'editTaskModal' + task.id"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editTaskModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+        <button
+          type="button"
+          class="close btn"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-task [task]="task" [editMode]="true"></app-add-task>
+      </div>
+    </div>
+  </div>
+</div>

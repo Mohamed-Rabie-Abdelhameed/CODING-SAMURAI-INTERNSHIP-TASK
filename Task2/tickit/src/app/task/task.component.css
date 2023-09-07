@@ -1,0 +1,67 @@
+.card {
+  background-color: var(--gray);
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  height: 90%;
+}
+.card:hover {
+  background-color: #fff;
+}
+.text-muted {
+  margin: 0;
+  margin-top: 10px;
+  padding-bottom: 0;
+}
+.bi {
+  font-size: 1.3rem;
+  color: #818181;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bi:hover {
+  color: var(--primary);
+}
+.high {
+  border-left: 10px solid red;
+}
+
+.medium {
+  border-left: 10px solid orange;
+}
+
+.low {
+  border-left: 10px solid green;
+}
+
+.done {
+  border-left: 10px solid #818181;
+}
+.done .card-title,
+.done .card-text,
+.done .text-muted {
+  text-decoration: line-through;
+}
+.done-bg {
+  background-color: #818181 !important;
+}
+.modal-content {
+  color: var(--dark);
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+.bi-trash {
+  margin-right: 15px;
+  margin-bottom: 5%;
+  transition: 0.3s all ease-in-out;
+}
+.bi-trash:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 0px;
+    height: 100%;
+  }
+}

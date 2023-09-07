@@ -1,0 +1,70 @@
+<div class="cont">
+  <div class="modl">
+    <div class="modal__body">
+      <div class="input">
+        <label class="input__label">Task title</label>
+        <input
+          class="input__field"
+          type="text"
+          placeholder="Enter task title"
+          [value]="editMode ? task.title : ''"
+          #taskTitleInput
+        />
+      </div>
+      <div class="input">
+        <label class="input__label">Priority</label>
+        <select class="input__field" #taskPrioritySelect>
+          <option value="1" [selected]="editMode && task.priority === 1">
+            High
+          </option>
+          <option value="2" [selected]="editMode && task.priority === 2">
+            Medium
+          </option>
+          <option value="3" [selected]="editMode && task.priority === 3">
+            Low
+          </option>
+        </select>
+      </div>
+      <div class="input">
+        <label class="input__label">Task description</label>
+        <textarea
+          class="input__field input__field--textarea"
+          placeholder="Enter task description"
+          [value]="editMode ? task.description : ''"
+          #taskDescriptionTextarea
+        ></textarea>
+      </div>
+    </div>
+    <div class="modal-footer position-relative">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">
+        Close
+      </button>
+      <button
+        *ngIf="task"
+        type="button"
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+        (click)="updateTask()"
+      >
+        Save changes
+      </button>
+      <button
+        *ngIf="!editMode"
+        type="button"
+        class="btn btn-primary"
+        (click)="addTask()"
+      >
+        Add Task
+      </button>
+      <button
+        *ngIf="editMode"
+        type="button"
+        class="btn btn-danger position-absolute start-0"
+        data-bs-dismiss="modal"
+        (click)="deleteTask()"
+      >
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

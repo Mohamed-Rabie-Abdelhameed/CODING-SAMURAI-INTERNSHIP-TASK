@@ -1,0 +1,63 @@
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray);
+}
+
+.modl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--gray);
+}
+
+.modal__body {
+  padding: 1rem 1rem;
+  background-color: var(--gray);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input + .input {
+  margin-top: 1.75rem;
+}
+
+.input__label {
+  font-family: "archivo", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.input__field {
+  display: block;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.75rem;
+  transition: 0.15s ease;
+}
+
+.input__field:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 1px var(--secondary), 0 0 0 2px var(--secondary);
+}
+
+.input__field--textarea {
+  min-height: 100px;
+  max-width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}

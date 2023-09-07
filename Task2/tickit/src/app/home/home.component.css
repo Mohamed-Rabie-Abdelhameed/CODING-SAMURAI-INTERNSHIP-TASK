@@ -7,10 +7,12 @@
 .spacer {
   height: 4rem;
   width: 100%;
+  background-color: var(--bg);
 }
 .spacer-sm {
   height: 2rem;
   width: 100%;
+  background-color: var(--bg);
 }
 .spacer-sm-2 {
   height: 1rem;
@@ -56,6 +58,7 @@
   font-size: 1.5rem;
   color: var(--dark);
 }
+
 .gradient {
   background: linear-gradient(to right, var(--primary), var(--accent));
   background-clip: text;
@@ -199,6 +202,6 @@ ul {
     border-radius: 0px 0px 10px 10px;
   }
   .col-md-4 {
-    padding: 0px 10px;
+    padding: 10px;
   }
 }

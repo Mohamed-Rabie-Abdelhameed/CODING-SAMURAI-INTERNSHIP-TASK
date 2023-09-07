@@ -1,0 +1,141 @@
+@import url("../home/home.component.css");
+
+.col-md-12 {
+  margin-top: 20px;
+}
+
+.col-md-3 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.line {
+  height: 2px;
+  width: 60%;
+  background-color: var(--accent);
+}
+.btn {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+  outline: none;
+}
+
+.btn:focus {
+  border: none;
+  outline: none;
+}
+
+.btn * {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover * {
+  color: var(--accent);
+}
+
+.bi {
+  color: var(--dark);
+  margin-left: 10px;
+}
+.display-3 {
+  font-weight: 300;
+  color: var(--dark);
+}
+.dropdown-item {
+  color: var(--dark);
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  color: var(--accent);
+}
+.dropdown-item:active {
+  background-color: var(--gray);
+}
+.modal-content {
+  background-color: var(--gray);
+}
+.lead{
+  padding: 0;
+  margin: 0;
+}
+.spacer-sm {
+  height: 1rem;
+}
+#add-task-btn .btn{
+  background-color: var(--accent);
+  color: var(--light);
+  padding: 0.4rem 1rem;
+}
+#add-task-btn .btn:hover {
+  background-color: var(--secondary);
+}
+#add-task-btn .btn:hover .bi{
+  color: var(--accent);
+}
+#add-task-btn .btn:focus {
+  background-color: var(--accent);
+}
+#add-task-btn .bi {
+  font-size: 1.2rem;
+  color: var(--light);
+}
+#add-task-btn-sm {
+  visibility: hidden;
+}
+#add-task-btn-sm .bi {
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .line {
+    display: none;
+  }
+  .btn {
+    padding: 0;
+  }
+  .btn p {
+    display: none;
+  }
+  .bi {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+  .col-md-3 {
+    margin-bottom: 10px;
+  }
+  #add-task-btn-sm {
+    visibility: visible;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  #add-task-btn-sm .bi {
+    visibility: visible;
+    font-size: 2rem;
+    color: var(--light);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #add-task-btn-sm:hover {
+    background-color: var(--secondary);
+  }
+  #add-task-btn{
+    display:none;
+  }
+  #add-task-btn .bi {
+    display: none;
+  }
+  #add-task-btn .lead {
+    display: none;
+  }
+}

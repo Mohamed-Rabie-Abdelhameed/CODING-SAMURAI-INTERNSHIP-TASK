@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
 import { ErrorComponent } from './error/error.component';
+import { TaskComponent } from './task/task.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ErrorComponent } from './error/error.component';
     NavbarComponent,
     HomeComponent,
     TasksComponent,
-    ErrorComponent
+    ErrorComponent,
+    TaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,17 @@
-@import url('../home/home.component.css');
-.row{
-    height: calc(100vh - 100px);
+@import url("../home/home.component.css");
+.row {
+  height: calc(100vh - 100px);
+  width: 100%;
 }
 
-img{
-    width: 90%;
-    margin: 0px;
-    padding: 0px;
+img {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 @media (max-width: 768px) {
-    img{
-        width: 100%;
-    }
-    *{
-        text-align: center;
-    }
+  * {
+    text-align: center;
+  }
 }
