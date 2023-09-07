@@ -175,4 +175,7 @@
   .spacer-sm {
     height: 2rem;
   }
+  .dropdown-menu{
+    inset:0px 0px auto auto !important;
+  }
 }
