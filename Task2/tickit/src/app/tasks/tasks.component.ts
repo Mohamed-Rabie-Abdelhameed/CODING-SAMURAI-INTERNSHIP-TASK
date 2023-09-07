@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Task } from '../models/task';
 import { TasksService } from '../services/tasks.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-tasks',
@@ -28,6 +29,10 @@ export class TasksComponent implements OnInit {
   ngOnInit() {
     this.tasks = this.tasksAPI.getAllTasks();
     this.shownTasks = this.tasks;
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
   }
 
   filterTasks(filter: string) {
