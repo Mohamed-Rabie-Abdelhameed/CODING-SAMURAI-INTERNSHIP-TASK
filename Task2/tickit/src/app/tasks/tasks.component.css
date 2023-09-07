@@ -2,6 +2,7 @@
 
 .col-lg-12 {
   margin-top: 20px;
+  z-index: 10;
 }
 
 .col-lg-3 {
@@ -41,11 +42,19 @@
   font-weight: 300;
   color: var(--dark);
 }
+
+.dropdown-menu {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 10px;
+  inset: 10px auto auto 10px !important;
+}
 .dropdown-item {
   color: var(--dark);
   cursor: pointer;
 }
 .dropdown-item:hover {
+  background-color: var(--light);
   color: var(--accent);
 }
 .dropdown-item:active {
