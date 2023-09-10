@@ -1,0 +1,9 @@
+.min-h-full{
+    height: calc(100vh - 6rem);
+}
+
+@media (max-width: 768px) {
+    .min-h-full{
+        height: calc(100vh - 5rem);
+    }
+}
