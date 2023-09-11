@@ -13,6 +13,7 @@ import { ArticleViewComponent } from './article-view/article-view.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ThemeSwitchComponent } from './theme-switch/theme-switch.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ThemeSwitchComponent } from './theme-switch/theme-switch.component';
     ArticlesComponent,
     ArticleViewComponent,
     ThemeSwitchComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
