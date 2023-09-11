@@ -1,0 +1,19 @@
+<div
+  class="bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
+  routerLink="articles/{{ article.id }}"
+>
+  <img
+    src="assets/images/articles/{{ article.image }}"
+    alt="Article Image"
+    class="w-full h-40 pt-2 object-contain"
+  />
+  <div class="p-4">
+    <h3 class="text-xl font-semibold text-black">{{ article.title }}</h3>
+    <p class="my-2 text-gray-dark">
+      {{ article.subtitle }}
+    </p>
+    <p class="my-0 mb-2 text-gray-dark">
+      {{ getDateString() }}
+    </p>
+  </div>
+</div>

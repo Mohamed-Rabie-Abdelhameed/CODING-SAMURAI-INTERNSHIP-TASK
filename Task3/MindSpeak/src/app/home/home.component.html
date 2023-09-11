@@ -1,1 +1,36 @@
-<p>home works!</p>
+<div class="bg-black flex items-center justify-center">
+  <div class="relative isolate px-6 lg:px-8 lg:py-4">
+    <div class="mx-auto max-w-2xl my-4 mb-12">
+      <div class="text-center">
+        <h1
+          class="text-4xl font-bold tracking-tight font-display text-white sm:text-6xl"
+        >
+          In every page, a new adventure awaits.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-white font-sans">
+          Explore my thoughts, stories, and insights on various topics.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a
+            routerLink="articles"
+            class="rounded-md bg-gray px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >Articles</a
+          >
+          <a
+            routerLink="about"
+            class="text-sm font-semibold leading-6 text-gray hover:underline hover:text-white"
+            >About me <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-2">
+        <app-article-card
+          [article]="article"
+          *ngFor="let article of articles"
+        ></app-article-card>
+      </div>
+    </section>
+  </div>
+</div>

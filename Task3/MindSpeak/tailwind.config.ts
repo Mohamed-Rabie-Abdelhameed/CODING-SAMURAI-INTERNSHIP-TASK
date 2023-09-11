@@ -9,7 +9,6 @@ export default {
         gray: '#d4d4d8',
         'gray-dark': '#616161',
         white: '#fafafa',
-        red: '#ff0000',
       },
       fontFamily: {
         sans: ['lato', 'sans-serif'],
