@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { ArticleViewComponent } from './article-view/article-view.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,15 +22,17 @@ import { MarkdownModule } from 'ngx-markdown';
     ErrorComponent,
     ArticleCardComponent,
     ArticlesComponent,
-    
+    ArticleViewComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MarkdownModule.forRoot(),
-
-  ],
+  imports: [BrowserModule, AppRoutingModule,
+    HttpClientModule,
+    MarkdownModule.forRoot(
+      {
+        loader: HttpClient,
+        sanitize: SecurityContext.NONE
+      }
+    )],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

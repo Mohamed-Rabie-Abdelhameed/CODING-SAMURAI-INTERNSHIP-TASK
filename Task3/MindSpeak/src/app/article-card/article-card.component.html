@@ -1,6 +1,6 @@
 <div
   class="bg-white h-100 shadow-lg rounded-lg cursor-pointer overflow-hidden"
-  routerLink="articles/{{ article.id }}"
+  [routerLink]="'/articles/' + article.id"
 >
   <img
     src="assets/images/articles/{{ article.image }}"

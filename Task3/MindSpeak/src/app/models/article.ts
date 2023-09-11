@@ -3,6 +3,5 @@ export class Article{
     title!: string;
     image!: string;
     subtitle!: string;
-    content!: string;
     date!: Date;
 }

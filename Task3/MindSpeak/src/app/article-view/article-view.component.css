@@ -1,0 +1,278 @@
+.article-content::first-letter {
+  font-size: 5.3rem;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  margin-right: 1rem;
+}
+
+.first-letter-light::first-letter {
+  color: #18181b;
+  background-color: #fafafa;
+}
+
+.first-letter-dark::first-letter {
+  color: #fafafa;
+  background-color: #18181b;
+}
+
+.article-content::ng-deep h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep h6 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.article-content::ng-deep p {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.article-content::ng-deep a {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep ul {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.article-content::ng-deep ol {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.article-content::ng-deep li {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep blockquote {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep pre {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  background-color: #616161;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.article-content::ng-deep code {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep img {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep table {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep thead {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep tbody {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep tr {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep th {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep td {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article-content::ng-deep hr {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .article-content::first-letter {
+    font-size: 3.3rem;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    padding: 0.8rem 1.2rem;
+    margin-right: 1rem;
+    color: #18181b;
+    background-color: #fafafa;
+  }
+  .article-content::ng-deep h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep h6 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .article-content::ng-deep p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .article-content::ng-deep a {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  .article-content::ng-deep ul {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .article-content::ng-deep ol {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .article-content::ng-deep li {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  .article-content::ng-deep blockquote {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  .article-content::ng-deep pre {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+    padding: 1rem;
+    color: #18181b;
+    border-radius: 0.5rem;
+    overflow-x: scroll;
+  }
+
+  .article-content::ng-deep code {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  .article-content::ng-deep table {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+}
