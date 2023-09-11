@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,14 @@ import { ArticleCardComponent } from './article-card/article-card.component';
     FooterComponent,
     ErrorComponent,
     ArticleCardComponent,
+    ArticlesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

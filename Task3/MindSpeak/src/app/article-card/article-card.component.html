@@ -1,10 +1,11 @@
 <div
-  class="bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
+  class="bg-white h-100 shadow-lg rounded-lg cursor-pointer overflow-hidden"
   routerLink="articles/{{ article.id }}"
 >
   <img
     src="assets/images/articles/{{ article.image }}"
     alt="Article Image"
+    loading="lazy"
     class="w-full h-40 pt-2 object-contain"
   />
   <div class="p-4">
