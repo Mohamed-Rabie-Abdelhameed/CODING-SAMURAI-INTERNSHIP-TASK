@@ -1,0 +1,17 @@
+<div
+  class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+>
+  <label class="relative inline-flex items-center cursor-pointer">
+    <input
+      type="checkbox"
+      value=""
+      class="sr-only peer"
+      (click)="toggleDarkMode()"
+    />
+    <img
+      class="w-12 h-7"
+      [src]="darkMode ? 'assets/images/sun.svg' : 'assets/images/moon.svg'"
+      alt="theme selector icon"
+    />
+  </label>
+</div>

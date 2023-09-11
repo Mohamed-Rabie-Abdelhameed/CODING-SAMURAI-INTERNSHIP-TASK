@@ -6,11 +6,11 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleViewComponent } from './article-view/article-view.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home',  redirectTo: '', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'articles/:id', component: ArticleViewComponent },
-  { path: '**',  component: ErrorComponent}, 
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({

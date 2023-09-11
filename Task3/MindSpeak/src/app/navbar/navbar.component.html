@@ -1,11 +1,11 @@
-<nav class="bg-black">
+<nav class="bg-white dark:bg-black dark:text-white">
   <div class="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:py-4 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
         <button
           type="button"
-          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white dark:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           aria-controls="mobile-menu"
           aria-expanded="false"
           (click)="toggleMenu()"
@@ -25,6 +25,7 @@
             stroke="white"
             aria-hidden="true"
             [ngClass]="isMenuOpen ? 'hidden' : 'block'"
+            [ngStyle]="{ stroke: isDarkMode ? 'white' : 'black' }"
           >
             <path
               stroke-linecap="round"
@@ -45,6 +46,7 @@
             stroke="white"
             aria-hidden="true"
             [ngClass]="isMenuOpen ? 'block' : 'hidden'"
+            [ngStyle]="{ stroke: isDarkMode ? 'white' : 'black' }"
           >
             <path
               stroke-linecap="round"
@@ -59,8 +61,9 @@
       >
         <div class="flex flex-shrink-0 items-center">
           <img
-          routerLink=""
-            class="h-8 w-auto"
+            id="logo"
+            routerLink=""
+            class="h-8 w-auto cursor-pointer"
             src="assets/images/logo-light.svg"
             alt="MindSpeak logo"
           />
@@ -69,37 +72,32 @@
           <div class="flex space-x-3">
             <a
               routerLink="home"
-              class="text-gray font-sans hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark rounded-md px-3 py-2 text-sm font-medium"
+              routerLinkActive="active"
               >Home</a
             >
             <a
               routerLink="articles"
-              class="text-gray font-sans hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark rounded-md px-3 py-2 text-sm font-medium"
+              routerLinkActive="active"
               >Articles</a
             >
             <a
               routerLink="about"
-              class="text-gray font-sans hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark rounded-md px-3 py-2 text-sm font-medium"
+              routerLinkActive="active"
               >About</a
             >
             <a
               routerLink="contact"
-              class="text-gray font-sans hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark rounded-md px-3 py-2 text-sm font-medium"
+              routerLinkActive="active"
               >Contact</a
             >
           </div>
         </div>
       </div>
-      <div
-        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-      >
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" value="" class="sr-only peer" />
-          <div
-            class="w-11 h-6 bg-gray peer-focus:outline-none peer-focus:ring-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-black after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-gray-dark"
-          ></div>
-        </label>
-      </div>
+      <app-theme-switch></app-theme-switch>
     </div>
   </div>
 
@@ -108,22 +106,26 @@
     <div class="space-y-1 px-2 pb-3 pt-2">
       <a
         routerLink="home"
-        class="text-gray font-sans hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+        class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
+        routerLinkActive="active"
         >Home</a
       >
       <a
         routerLink="articles"
-        class="text-gray font-sans hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+        class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
+        routerLinkActive="active"
         >Articles</a
       >
       <a
         routerLink="about"
-        class="text-gray font-sans hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+        class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
+        routerLinkActive="active"
         >About</a
       >
       <a
         routerLink="contact"
-        class="text-gray font-sans hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+        class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
+        routerLinkActive="active"
         >Contact</a
       >
     </div>

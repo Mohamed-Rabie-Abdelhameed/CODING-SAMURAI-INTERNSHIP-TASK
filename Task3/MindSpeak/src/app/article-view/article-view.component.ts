@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from '../models/article';
 import { ArticlesService } from '../services/articles.service';
-
 @Component({
   selector: 'app-article-view',
   templateUrl: './article-view.component.html',
@@ -11,7 +10,8 @@ import { ArticlesService } from '../services/articles.service';
 export class ArticleViewComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
+    private router: Router
   ) {}
   articleMd: string = '';
   id: number = 0;
@@ -20,8 +20,13 @@ export class ArticleViewComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.id = params['id'];
     });
-    this.articleMd = this.articlesService.getArticleContent(this.id);
     this.article = this.articlesService.getArticle(this.id);
+    if (!this.article) {
+      this.router.navigate(['/error']);
+      return;
+    }
+    this.articleMd = this.articlesService.getArticleContent(this.id);
+        
   }
   getDateTimeString(): string {
     if (this.article) {
