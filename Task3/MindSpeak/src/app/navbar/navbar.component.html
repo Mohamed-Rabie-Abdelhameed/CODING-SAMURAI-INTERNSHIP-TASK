@@ -18,6 +18,7 @@
               Menu open: "hidden", Menu closed: "block"
             -->
           <svg
+            id="open-menu"
             class="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
@@ -25,7 +26,6 @@
             stroke="white"
             aria-hidden="true"
             [ngClass]="isMenuOpen ? 'hidden' : 'block'"
-            [ngStyle]="{ stroke: isDarkMode ? 'white' : 'black' }"
           >
             <path
               stroke-linecap="round"
@@ -39,6 +39,7 @@
               Menu open: "block", Menu closed: "hidden"
             -->
           <svg
+            id="close-icon"
             class="h-8 w-8"
             fill="none"
             viewBox="0 0 24 24"
@@ -46,7 +47,6 @@
             stroke="white"
             aria-hidden="true"
             [ngClass]="isMenuOpen ? 'block' : 'hidden'"
-            [ngStyle]="{ stroke: isDarkMode ? 'white' : 'black' }"
           >
             <path
               stroke-linecap="round"
@@ -108,24 +108,28 @@
         routerLink="home"
         class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
         routerLinkActive="active"
+        (click)="toggleMenu()"
         >Home</a
       >
       <a
         routerLink="articles"
         class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
         routerLinkActive="active"
+        (click)="toggleMenu()"
         >Articles</a
       >
       <a
         routerLink="about"
         class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
         routerLinkActive="active"
+        (click)="toggleMenu()"
         >About</a
       >
       <a
         routerLink="contact"
         class="dark:text-gray text-black font-sans dark:hover:text-white hover:text-gray-dark block rounded-md px-3 py-2 text-base font-medium"
         routerLinkActive="active"
+        (click)="toggleMenu()"
         >Contact</a
       >
     </div>

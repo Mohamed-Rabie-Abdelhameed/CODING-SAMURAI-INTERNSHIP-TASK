@@ -14,7 +14,8 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ThemeSwitchComponent } from './theme-switch/theme-switch.component';
 import { AboutComponent } from './about/about.component';
-
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { AboutComponent } from './about/about.component';
     ArticleViewComponent,
     ThemeSwitchComponent,
     AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import { AboutComponent } from './about/about.component';
       loader: HttpClient,
       sanitize: SecurityContext.NONE,
     }),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

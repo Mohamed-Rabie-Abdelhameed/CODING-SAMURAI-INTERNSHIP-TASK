@@ -1,0 +1,99 @@
+<section class="bg-white dark:bg-black">
+  <div class="py-8 lg:py-12 px-4 mx-auto max-w-screen-md">
+    <h2
+      class="mb-8 text-4xl lg:text-6xl tracking-tight font-bold font-display text-center text-black dark:text-white"
+    >
+      Contact Me
+    </h2>
+    <p
+      class="mb-8 lg:mb-12 font-sans text-lg leading-8 text-center text-gray-dark dark:text-gray sm:text-xl"
+    >
+      Have questions, feedback, or just want to say hi? Feel free to reach out
+      using the contact form below. I'd love to hear from you!
+    </p>
+    <form
+      #contactForm="ngForm"
+      (ngSubmit)="onSubmit(contactForm.value)"
+      class="space-y-8 bg-gray px-8 py-12 rounded-lg dark:bg-gray-dark"
+    >
+      <div>
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-black dark:text-white"
+          >Your email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="contactForm.value.email"
+          #email="ngModel"
+          class="shadow-sm bg-white border border-gray-dark text-gray-dark text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray dark:border-gray-dark dark:placeholder-gray-dark dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="name@gmail.com"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="subject"
+          class="block mb-2 text-sm font-medium text-black dark:text-white"
+          >Subject</label
+        >
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray dark:border-gray-dark dark:placeholder-gray-dark dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="Let me know how i can help you"
+          [(ngModel)]="contactForm.value.subject"
+          #subject="ngModel"
+          required
+        />
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-black dark:text-white"
+          >Your message</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray dark:border-gray-dark dark:placeholder-gray-dark dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500"
+          placeholder="Leave a comment..."
+          [(ngModel)]="contactForm.value.message"
+          #message="ngModel"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="py-3 px-5 font-medium text-center text-white dark:bg-gray dark:text-black dark:hover:bg-white rounded-lg bg-gray-dark sm:w-fit hover:bg-black dark:bg-primary-600"
+      >
+        Send message
+      </button>
+    </form>
+  </div>
+  <div
+    id="toast"
+    class="hidden fixed bottom-4 right-4 flex items-center w-full max-w-xs p-4 space-x-4 text-gray-dark bg-white outline outline-1 divide-x divide-gray rounded-lg shadow dark:text-black dark:divide-gray-dark space-x dark:bg-white"
+    role="alert"
+  >
+    <svg
+      class="w-5 h-5 text-black dark:text-black rotate-45"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 18 20"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+      />
+    </svg>
+    <div class="pl-4 font-normal">{{ snack }}</div>
+  </div>
+</section>
