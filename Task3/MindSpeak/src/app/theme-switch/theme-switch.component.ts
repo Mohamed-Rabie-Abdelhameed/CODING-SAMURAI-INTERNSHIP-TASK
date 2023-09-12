@@ -37,17 +37,21 @@ export class ThemeSwitchComponent implements OnInit {
   private toggleIcons() {
     const close = document.getElementById('close-icon');
     const open = document.getElementById('open-menu');
-    const logo = document.getElementById('logo') as HTMLImageElement;
+    const logo = document.getElementsByClassName('logo');
     const theme = document.getElementById('theme-icon') as HTMLImageElement;
     if (this.darkMode) {
       close?.style.setProperty('stroke', '#fafafa');
       open?.style.setProperty('stroke', '#fafafa');
-      logo.src = 'assets/images/logo-light.svg';
+      for (let i = 0; i < logo.length; i++) {
+        logo[i].setAttribute('src', 'assets/images/logo-light.svg');
+      }
       theme.src = 'assets/images/sun.svg';
     } else {
       close?.style.setProperty('stroke', '#18181b');
       open?.style.setProperty('stroke', '#18181b');
-      logo.src = 'assets/images/logo.svg';
+      for (let i = 0; i < logo.length; i++) {
+        logo[i].setAttribute('src', 'assets/images/logo.svg');
+      }
       theme.src = 'assets/images/moon.svg';
     }
   }
