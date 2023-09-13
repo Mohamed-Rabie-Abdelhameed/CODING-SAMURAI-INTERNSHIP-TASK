@@ -23,12 +23,14 @@ export class ThemeSwitchComponent implements OnInit {
 
   private toggleDarkModeStyles() {
     const body = document.querySelector('body');
-    const logo = document.getElementById('logo') as HTMLImageElement;
     if (body) {
       if (this.darkMode) {
         body.classList.add('dark');
       } else {
         body.classList.remove('dark');
+        body.animate([{ opacity: 0 }, { opacity: 1 }], {
+          duration: 500,
+        });
       }
       this.toggleIcons();
     }

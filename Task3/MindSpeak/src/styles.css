@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* For Webkit-based browsers (e.g., Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 5px; /* Set the width of the scrollbar */
@@ -22,4 +21,17 @@
 *::selection {
   background-color: #616161;
   color: #ffffff;
+}
+
+.dark {
+  animation: opacity 0.5s ease-in-out;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
