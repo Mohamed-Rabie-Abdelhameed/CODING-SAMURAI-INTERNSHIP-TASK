@@ -16,6 +16,7 @@ import { ThemeSwitchComponent } from './theme-switch/theme-switch.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     ThemeSwitchComponent,
     AboutComponent,
     ContactComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,

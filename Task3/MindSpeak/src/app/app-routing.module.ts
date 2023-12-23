@@ -6,6 +6,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleViewComponent } from './article-view/article-view.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'articles/:id', component: ArticleViewComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: '**', component: ErrorComponent },
 ];
 
